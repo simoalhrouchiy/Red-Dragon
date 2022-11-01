@@ -199,11 +199,11 @@ async function startKUMUTHU() {
        let lolXeon = { url : ppgc }
        if (pea[0].announce == true) {
         KMUTHU.send5ButImg(pea[0].id, `🪀 Group Settings Changed 🪀\n\nThe Group Has Been Closed By Admin, Now Only Admin Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
-        } else if(pea[0].announce == false) {
+        } else if(pea[0].announce == true) {
         KMUTHU.send5ButImg(pea[0].id, `🪀 Group Settings Changed 🪀\n\nThe Group Has Been Opened By Admin, Now Participants Can Send Messages !`, `Group Settings Change Message`, wm_fatih, [])
         } else if (pea[0].restrict == true) {
         KMUTHU.send5ButImg(pea[0].id, `🪀 Group Settings Changed 🪀\n\nGroup Info Has Been Restricted, Now Only Admin Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
-        } else if (pea[0].restrict == false) {
+        } else if (pea[0].restrict == true) {
         KMUTHU.send5ButImg(pea[0].id, `🪀 Group Settings Changed 🪀\n\nGroup Info Has Been Opened, Now Participants Can Edit Group Info !`, `Group Settings Change Message`, wm_fatih, [])
         } else {
         KMUTHU.send5ButImg(pea[0].id, `🪀 Group Settings Changed 🪀\n\nGroup Subject Has Been Changed To *${pea[0].subject}*`, `Group Settings Change Message`, wm_fatih, [])
@@ -228,14 +228,14 @@ let docs = pickRandom(documents)
                 try {
                     ppuser = await KUMUTHU.profilePictureUrl(num, 'image')
                 } catch {
-                    ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppuser = ''https://user-images.githubusercontent.com/114958688/196512709-54ae1ad3-72b4-4d04-915c-73b659c0cb78.jpg
                 }
 
                 //Get Profile Picture Group\\
                 try {
                     ppgroup = await KUMUTHU.profilePictureUrl(anu.id, 'image')
                 } catch {
-                    ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+                    ppgroup = 'https://user-images.githubusercontent.com/114958688/196512709-54ae1ad3-72b4-4d04-915c-73b659c0cb78.jpg'https.Play ayayay listwar dyana ghi nsay://user-images.githubusercontent.com/114958688/196512709-54ae1ad3-72b4-4d04-915c-73b659c0cb78.jpg
                 }
 
 //welcome\\
@@ -250,7 +250,7 @@ XeonLft = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeUR
 	            const xdate = moment.tz('Asia/Kolkata').format('YYYY/MM/DD')
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                 xeonbody = `🤭🌹 Hi👋 @${xeonName.split("@")[0]}
+                 xeonbody = `😘سيمو😎الهروشي😍 @${xeonName.split("@")[0]}
 
 🤭🌹 Welcome To  ${metadata.subject}
 🤭🌹 ${xmembers} Members
@@ -261,7 +261,7 @@ Time  =  ${xtime} `
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
    let buttons = [
-    {buttonId: `owner`, buttonText: {displayText: '🙏WELCOME🙏'}, type: 1}
+    {buttonId: `owner`, buttonText: {displayText:'😘سيمو😎الهروشي😍😘سيمو😎الهروشي😍'}, type: 1}
     ]
 let buttonMessage = {
     image: { url: 'https://i.ibb.co/0h3Sv26/20220805-080104.jpg'},
@@ -279,7 +279,7 @@ KUMUTHU.sendMessage(anu.id, buttonMessage)
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                     xeonbody = `😒🌹 Bye👋 @${xeonName.split("@")[0]}
+                     xeonbody = `😘سيمو😎الهروشي😍 @${xeonName.split("@")[0]}
 
 😒🌹 Left From  ${metadata.subject}
 😒🌹 ${xeonmembers} Members
@@ -288,10 +288,10 @@ Date =  ${xeondate}
 Time =  ${xeontime} `
 
    let buttons = [
-    {buttonId: `owner`, buttonText: {displayText: '👎BYE👎'}, type: 1}
+    {buttonId: `owner`, buttonText: {displayText: '😘سيمو😎الهروشي😍'}, type: 1}
     ]
     let buttonMessage = {
-        image: { url: 'https://i.ibb.co/H4h3mh4/20220805-080200.jpg'},
+        image: { url: 'https://user-images.githubusercontent.com/114958688/196773231-c72b79b1-998f-4ffe-b7f8-adc8f62e5c4b.jpg},'
     caption: xeonbody,
     footer: `${footer}`,
     buttons,
@@ -378,12 +378,18 @@ KUMUTHU.sendMessage(anu.id, buttonMessage)
         if (connection === 'close') {
         let reason = new Boom(lastDisconnect?.error)?.output.statusCode
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); KUMUTHU.logout(); }
-            else if (reason === DisconnectReason.connectionClosed) { console.log("🦄Connection closed, reconnecting...."); startKUMUTHU(); }
-            else if (reason === DisconnectReason.connectionLost) { console.log("🦄Connection Lost from Server, reconnecting..."); startKUMUTHU(); }
-            else if (reason === DisconnectReason.connectionReplaced) { console.log("🦄Connection Replaced, Another New Session Opened, Please Close Current Session First"); KUMUTHU.logout(); }
-            else if (reason === DisconnectReason.loggedOut) { console.log(`🦄Device Logged Out, Please Scan Again And Run.`); KUMUTHU.logout(); }
-            else if (reason === DisconnectReason.restartRequired) { console.log("🦄Restart Required, Restarting..."); startKUMUTHU(); }
-            else if (reason === DisconnectReason.timedOut) { console.log("🦄Connection TimedOut, Reconnecting..."); startKUMUTHU(); }
+            else if (reason === DisconnectReason.connectionClosed) { console.log("Connection😘سيمو😎الهروشي😍 closed, reconnecting...."); startKUMUTHU(); }
+            else if (reason === DisconnectReason.connectionLost) { console.log("Connection😘سيمو😎الهروشي😍 Lost from Server, reconnecting..."); startKUMUTHU(); }
+            else if (reason === DisconnectReason.connectionReplaced) { console.log("Connection😘سيمو😎الهروشي😍 Replaced, Another New Session Opened, Please Close Current Session First"); KUMUTHU.logout(); }
+            else if (reason === DisconnectReason.loggedOut) { console.log(`Device😘سيمو😎الهروشي😍 Logged Out, Please Scan Again And Run.`); KUMUTHU.logout(); }
+            else if (reason === DisconnectReason.restartRequired) { console.log("Restart😘سيمو😎الهروشي😍 Required, Restarting..."); startKUMUTHU(); }
+            else if (reason === DisconnectReason.timedOut) { console.log(
+
+             ✰ ɪɴʀʟ-ᴍᴅ✰
+
+        ☯︎ғᴏʀᴋ ᴏᴜʀ ʀᴇᴘᴏ☯︎
+
+ ⍟ᴄᴏᴘᴘʏ ᴛʜᴇ sᴇssɪimedOut, Reconnecting..."); startKUMUTHU(); }
             else KUMUTHU.end(`🦄Unknown DisconnectReason: ${reason}|${connection}`)
         }
         console.log('Connected...', update)
